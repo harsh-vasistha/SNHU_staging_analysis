@@ -1,0 +1,6 @@
+Queries
+Integration Staging
+SELECT Id,Object_Name__c,SFDC_Id__c,Status__c,TimeStamp__c FROM Integration_Staging__c WHERE Direction__c = 'Inbound' AND CreatedDate = TODAY ORDER BY CreatedDate DESC NULLS FIRST
+
+DLOG
+SELECT CreatedById,CreatedDate,Details__c,Id,IsDeleted,LastModifiedById,LastModifiedDate,LastReferencedDate,LastViewedDate,Log_Age__c,Message__c,Name,OwnerId,RecordTypeId,Severity__c,Source_Type__c,Source__c,SystemModstamp,Timestamp__c,Type__c FROM DLOG_Object__c WHERE CreatedDate = YESTERDAY AND Source_Type__c = 'SIS Integration'
